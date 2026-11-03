@@ -1,0 +1,243 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#app {
+  max-width: 650px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+  background: #f4f6f8;
+  padding: 24px;
+  border-radius: 16px; 
+  border: 1px solid #e0e0e0;
+}
+
+header {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+header h1, header h2 {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #212529;
+}
+
+.content-box {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0; 
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.form-section h3, 
+.list-section h3 {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  color: #212529;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 10px; 
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.form-group {
+  margin-bottom: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select,
+.form-group label {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #333333;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #0d6efd;
+  outline: none;
+}
+
+.checkbox-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #495057;
+  cursor: pointer;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-left: 5px solid #ffc107; 
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+.task-card.completed {
+  border-left-color: #28a745; 
+  opacity: 0.75;
+}
+
+.task-card h4 {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  margin: 0 0 6px 0;
+  color: #212529;
+}
+
+.task-card.completed h4 {
+  color: #888888;
+}
+
+.task-meta div, 
+.task-meta span {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.9rem;
+  color: #666666;
+  margin-bottom: 4px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.badge-warning { background: #fff3cd; color: #856404; }
+.badge-success { background: #d4edda; color: #155724; }
+.empty-msg { text-align: center; color: #888888; font-size: 0.95rem; }
+
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-sm {
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  margin-left: 4px;
+}
+
+.rounded-4 {
+  border-radius: 50rem !important;
+}
+
+/* Variant Warna Tombol Outline */
+.btn-outline-primary {
+  color: #0d6efd;
+  background-color: transparent;
+  border-color: #0d6efd;
+}
+.btn-outline-primary:hover {
+  color: #ffffff;
+  background-color: #0d6efd;
+}
+
+.btn-secondary {
+  color: #6c757d;
+  background-color: transparent;
+  border-color: #6c757d;
+}
+.btn-secondary:hover {
+  color: #ffffff;
+  background-color: #6c757d;
+}
+
+.btn-success {
+  color: #28a745;
+  background-color: transparent;
+  border-color: #28a745;
+}
+.btn-success:hover {
+  color: #ffffff;
+  background-color: #28a745;
+}
+
+.btn-warning {
+  color: #ffc107;
+  background-color: transparent;
+  border-color: #ffc107;
+}
+.btn-warning:hover {
+  color: #212529;
+  background-color: #ffc107;
+}
+
+.btn-danger {
+  color: #dc3545;
+  background-color: transparent;
+  border-color: #dc3545;
+}
+.btn-danger:hover {
+  color: #ffffff;
+  background-color: #dc3545;
+}
+
+.btn-info {
+  color: #17a2b8;
+  background-color: transparent;
+  border-color: #17a2b8;
+}
+.btn-info:hover {
+  color: #ffffff;
+  background-color: #17a2b8;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  clear: both;
+  width: 100%;
+}
+
+.version-text {
+  color: #777777;
+  font-size: 0.85rem;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}

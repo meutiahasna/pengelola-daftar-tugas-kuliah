@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pengelola Daftar Tugas Kuliah</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- Header Aplikasi -->
+      <header>
+        <h1 id="app-title"></h1>
+      </header>
+
+      <main>
+          <!-- Form Tambah / Edit Tugas -->
+        <section class="content-box form-section">
+          <h3 id="form-heading">Tambah Tugas Baru</h3>
+          <form id="task-form">
+            <input type="hidden" id="task-id" />
+            
+            <div class="form-group">
+              <input type="text" id="task-title" placeholder="Judul Tugas (misal: Exercise 10 MBD)" required />
+            </div>
+
+            <div class="form-group">
+              <input type="text" id="task-course" placeholder="Mata Kuliah (misal: Manajemen Basis Data)" required />
+            </div>
+
+            <div class="form-group">
+              <input type="date" id="task-deadline" required />
+            </div>
+
+            <div class="form-group">
+              <select id="task-priority">
+                <option value="Rendah">Prioritas: Rendah</option>
+                <option value="Sedang" selected>Prioritas: Sedang</option>
+                <option value="Tinggi">Prioritas: Tinggi</option>
+              </select>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label>
+                <input type="checkbox" id="task-important" /> Tanda Penting
+              </label>
+            </div>
+
+            <div class="button-group">
+              <button type="submit" id="btn-submit" class="btn btn-outline-primary rounded-4">Tambah Tugas</button>
+              <button type="button" id="btn-cancel" class="btn btn-secondary rounded-4" style="display: none;">Batal Edit</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Daftar Tugas -->
+        <section class="content-box list-section">
+          <h3>Daftar Tugas Kuliah</h3>
+          <div id="task-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+        <p id="app-version" class="version-text"></p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
