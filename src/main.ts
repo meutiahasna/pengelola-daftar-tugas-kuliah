@@ -48,7 +48,7 @@ function getDynamicPriority(deadlineStr: string, currentPriority: TaskPriority):
   const diffTime = deadlineDate.getTime() - today.getTime();
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-  // Jika tenggat kurang dari atau sama dengan 1 hari (H-1 atau Hari H / Terlewat)
+  // Kalau tenggat kurang dari atau sama dengan 1 hari akan diberi peringatan bahwa sedang mendekati tenggat
   if (diffDays <= 1) {
     return { priority: 'Tinggi', isUrgent: true };
   }
@@ -158,7 +158,7 @@ formEl.addEventListener('submit', (e: SubmitEvent) => {
   renderTasks();
 });
 
-// 7. Fungsi Reset Form
+// Fungsi Reset Form
 function resetForm(): void {
   editingTaskId = null;
   taskIdInput.value = '';

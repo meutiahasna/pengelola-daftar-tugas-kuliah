@@ -6,7 +6,7 @@ export type TaskPriority = 'Rendah' | 'Sedang' | 'Tinggi';
 
 // Interface struktur data Tugas Kuliah
 export interface Task {
-  id: string;             // Primitive type: string
+  id: string;             // Primitive type: string (Id)
   title: string;          // Primitive type: string (Nama Tugas)
   course: string;         // Primitive type: string (Mata Kuliah)
   deadline: string;       // Primitive type: string (Tanggal Tenggat)
