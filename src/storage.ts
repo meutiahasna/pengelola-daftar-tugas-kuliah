@@ -1,7 +1,7 @@
 // Fungsi Utilitas LocalStorage pake Generics Sederhana
 
 /**
- * Fungsi Generic untuk simpan data ke LocalStorage
+ * Fungsi Generic untuk menyimpan data ke LocalStorage
  * @template T Tipe data generik yang akan disimpan
  */
 
@@ -10,7 +10,7 @@ export function saveToStorage<T>(key: string, data: T): void {
 }
 
 /**
- * Fungsi Generic untuk ambil data dari LocalStorage
+ * Fungsi Generic untuk mengambil data dari LocalStorage
  * @template T Tipe data generik yang dikembalikan
  */
 
