@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #ffffff;
@@ -14,7 +18,7 @@ body {
   margin: 0 auto;
   width: 100%;
   flex: 1;
-  background: #f4f6f8;
+  background: #f8f9fa;
   padding: 24px;
   border-radius: 16px; 
   border: 1px solid #e0e0e0;
@@ -69,6 +73,7 @@ header h1, header h2 {
 .form-group input[type="date"],
 .form-group select {
   width: 100%;
+  min-height: 42px;
   padding: 10px;
   border: 1px solid #cccccc;
   border-radius: 6px;
@@ -239,4 +244,44 @@ footer {
   font-size: 0.85rem;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  #app {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .content-box {
+    padding: 16px;
+  }
+
+  .task-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .task-card > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .btn-sm {
+    margin-left: 0;
+  }
+}
+
+input[type="date"]:not(:focus):invalid::before {
+  content: "Pilih Tanggal Tenggat";
+  color: #757575;
+  margin-right: 8px;
 }
